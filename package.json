@@ -19,6 +19,7 @@
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^1.0.8",
     "@tailwindcss/custom-forms": "^0.2.1"
   }
 }
