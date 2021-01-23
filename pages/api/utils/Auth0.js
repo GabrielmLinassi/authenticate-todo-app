@@ -5,8 +5,10 @@ export default initAuth0({
   clientId: process.env.AUTH0_CLIENT_ID,
   clientSecret: process.env.AUTH0_CLIENT_SECRET,
   scope: "openid profile",
-  redirectUri: process.env.AUTH0_REDIRECT_URI,
-  postLogoutRedirectUri: process.env.AUTH0_LOGOUT_REDIRECT_URI,
+  redirectUri:
+    "https://main--condescending-jennings-84e1f7.netlify.app/api/callback",
+  postLogoutRedirectUri:
+    "https://main--condescending-jennings-84e1f7.netlify.app",
   session: {
     cookieSecret: process.env.COOKIE_SECRET,
   },
