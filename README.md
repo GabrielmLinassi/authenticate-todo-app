@@ -15,4 +15,4 @@ This is a Next.js authenticated TODO application powered by Auth0, Tailwind.css 
 - Airtable for storing the data
 - Tailwind for styling
 
-Live version can be accessed on [https://condescending-jennings-84e1f7.netlify.app/](https://condescending-jennings-84e1f7.netlify.app/)
+Live version can be accessed on [https://authenticated-todo.netlify.app/](https://authenticated-todo.netlify.app/)
