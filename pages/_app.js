@@ -1,13 +1,14 @@
-import "tailwindcss/tailwind.css";
+import "styles/global.css";
 import { TodosProvider } from "contexts/TodosContext";
+import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <TodosProvider>
-      <div className="container mx-auto my-10 max-w-xl">
+    <ThemeProvider attribute="class">
+      <TodosProvider>
         <Component {...pageProps} />
-      </div>
-    </TodosProvider>
+      </TodosProvider>
+    </ThemeProvider>
   );
 }
 

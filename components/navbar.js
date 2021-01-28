@@ -1,10 +1,25 @@
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import ThemeSwitch from "./ThemeSwitch";
+
 export default function Nav({ user }) {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+    setTheme("light");
+  }, []);
+
   return (
     <nav className="flex justify-between py-4">
-      <a href="#" className="text-2xl font-bold text-gray-800">
+      <a href="#" className="text-2xl font-bold text-gray-800 dark:text-white">
         TODO App
       </a>
-      <ul className="flex">
+      <ul className="flex items-center">
+        <li className="mr-3">
+          <ThemeSwitch theme={theme} setTheme={setTheme} mounted={mounted} />
+        </li>
         {user ? (
           <li>
             <a
